@@ -1,0 +1,24 @@
+<router-outlet><router-outlet />
+  <h2>New Test</h2> 
+  <input type="text" [value]="pokemonName" (input)="handleChange($event)" />
+<p>{{pokemonName}}</p>
+ 
+<br />
+
+<!--
+<div *ngIf="!pokemonName" >
+  No search results have been found...
+</div>
+-->
+
+<ng-container *ngIf="pokemonName.length; then pokemonList; else noPokemon " >
+</ng-container>
+
+<ng-template #pokemonList >
+  <h1>All pokemon available</h1>
+</ng-template>
+
+<ng-template #noPokemon >
+  <h1>No pokemon available.</h1>
+</ng-template>
+

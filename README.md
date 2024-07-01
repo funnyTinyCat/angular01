@@ -1,3 +1,13 @@
+# crud operations.
+
+1. This is project with inplemented crud operations. 
+
+2. I used dotnet8api project, as api source, comments table - funnyTinyCat/dotnet8api.
+
+3. Here you can find basics of angular.
+
+
+
 # MyApp02
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.

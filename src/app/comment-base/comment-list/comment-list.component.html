@@ -1,0 +1,28 @@
+
+
+<div class="container-lg mt-5 mb-5" >
+    <button type="button" [routerLink]="['create/new']" class="btn btn-success">Create</button>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th >Content</th>
+                <th>Created On</th>
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let comment of comments" >
+
+                <td>{{ comment.title }}</td>
+                <td>{{ comment.content }}</td>
+                <td>{{ comment.createdOn }}</td>
+                <td><button [routerLink]="['/comment', comment.id]" type="button" class="btn btn-dark" (click)="goToDetail($event)" id="{{comment.id}}" >Detail View</button></td>
+                <td><button [routerLink]="['/comment/edit', comment.id]" type="button" class="btn btn-secondary" id="{{comment.id}}" >Edit</button></td>
+                <td><button  type="button" (click)="deleteComment($event, comment.id)" class="btn btn-danger" id="{{comment.id}}" >Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,9 @@
+<ng-content select="h1" ></ng-content>
+<tr>
+    <td [class.cool-bool]="detail.isCool">{{detail.id}}</td>
+    <td [ngStyle]="{backgroundColor: (detail.isStylish ? '#800080' : '')}" >{{detail.name}}</td>
+    <td [style.backgroundColor]="(detail.isStylish ? '#BF40BF' : '')">{{detail.type}}</td>
+    <button [routerLink]="['/pokemon', detail.id]" >Details</button>
+    <button (click)="onRemove()" >Remove Pokemon</button>
+    
+</tr>

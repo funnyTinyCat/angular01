@@ -1,0 +1,23 @@
+
+<p>pokemon-list works!</p>
+<table>
+    <thead>
+      <th>Index</th>
+      <th #pokemonTh >Name</th>
+      <th>Type</th>
+    </thead>
+    <tbody>
+      <app-pokemon-detail 
+      #pokemonRef
+      *ngFor="let pokemon of pokemons" 
+      [detail]="pokemon" 
+      (remove)="handleRemove($event)"
+      ><h1>----------------------------------------------</h1></app-pokemon-detail>
+
+    </tbody>
+    <div highlighttext >This is highlighttext</div>
+    <h2 *customif="true" >This is true</h2>
+    <h2 *customif="false" >This is false</h2>
+   
+   </table>
+  

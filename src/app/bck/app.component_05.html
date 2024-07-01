@@ -1,0 +1,4 @@
+<router-outlet><router-outlet />
+  <h2>Two Way Binding Model</h2>
+  <input type="text" #pokemonName />
+<button type="button" (click)="handleClick(pokemonName.value)" >Click</button>

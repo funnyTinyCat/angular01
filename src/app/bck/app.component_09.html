@@ -1,0 +1,17 @@
+<router-outlet><router-outlet />
+  <h2>New Test</h2> 
+ <table>
+  <thead>
+    <th>Index</th>
+    <th>Name</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td [class.cool-bool]="pokemon.isCool">{{pokemon.id}} - {{i}}</td>
+      <td [ngStyle]="{backgroundColor: (pokemon.isStylish ? '#800080' : '')}" >{{pokemon.name}}</td>
+      <td [style.backgroundColor]="(pokemon.isStylish ? '#BF40BF' : '')">{{pokemon.type}}</td>
+    </tr>
+  </tbody>
+
+ </table>
