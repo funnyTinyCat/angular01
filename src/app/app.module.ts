@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { CommentBaseModule } from './comment-base/comment-base.module';
 import { LoaderComponent } from './partials/loader/loader.component';
+import { LijekBaseModule } from './lijek-base/lijek-base.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LoaderComponent } from './partials/loader/loader.component';
     AppRoutingModule,
     FormsModule,
     PokemonBaseModule,
-    CommentBaseModule
+    CommentBaseModule,
+    LijekBaseModule
   ],
   providers: [
     //PokemonService

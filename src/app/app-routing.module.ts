@@ -8,6 +8,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: "full" },
     { path: 'pokemon', loadChildren: () => import('./pokemon-base/pokemon-base.module').then(m => m.PokemonBaseModule) },    
     { path: 'comment', loadChildren: () => import('./comment-base/comment-base.module').then(m => m.CommentBaseModule) },    
+    { path: 'lijek', loadChildren: () => import('./lijek-base/lijek-base.module').then(m => m.LijekBaseModule) },    
     { path: "**", component: NotfoundComponent // , pathMatch: "full"
       }
 ];

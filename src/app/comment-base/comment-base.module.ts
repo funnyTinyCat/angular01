@@ -42,7 +42,8 @@ const routes: Routes = [
     CommentListComponent,
     CommentDetailComponent,
     CommentFormComponent,
-    CommentFormCreateComponent
+    CommentFormCreateComponent,
+    LoaderComponent
   ],
   providers: [
     CommentService

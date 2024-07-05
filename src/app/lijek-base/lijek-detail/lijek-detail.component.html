@@ -1,0 +1,29 @@
+
+<div class="container-sm mt-5 mb-5">
+   
+    <div class="card" style="width:600px">
+   
+        <div class="card-body">
+        
+          <h4 class="card-title"><span class="text-primary">Naziv: </span>{{ lijek.imeLijeka }}</h4>
+          <p class="card-text"><span class="text-primary">Opis: </span>{{ lijek.opisLijeka }}</p>
+          <p class="card-text"><span class="text-primary">Sifra: </span>{{ lijek.sifra }}</p>
+          <p class="card-text"><span class="text-primary">Doziranje: </span>{{ lijek.doziranje }}</p>
+          <button type="button" [routerLink]="['/lijek/edit', lijek.id]" class="btn btn-warning" id="{{lijek.id}}" >Edit</button>
+          <span style="margin-left: 5px" ></span>
+          <button  type="button" (click)="deleteLijek($event, lijek.id)" class="btn btn-danger" id="{{lijek.id}}" >Delete</button>
+      <!--   <a href="#" class="btn btn-primary">See Profile</a>  --> 
+        </div>
+ <!--        <img class="card-img-bottom" src="http://localhost:5078/resources/635aa94f-2d00-4c0d-9243-437c9926deca.jpg" alt="Card image" style="width:100%">
+    -->
+        <img class="card-img-bottom" src="{{pathToImage}}" alt="Card image" style="width:100%">
+    
+    <div style="margin:12px">
+        <button class="btn btn-primary float-start" (click)="back()" >Back</button>
+        <button type="button" [routerLink]="['/lijek/create/new']" class="btn btn-success float-end" >Create</button>
+    </div>
+    </div>
+</div>
+<!-- http://localhost:5078/resources/
+ -->
+  

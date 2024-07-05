@@ -1,0 +1,31 @@
+
+
+<div class="container-lg mt-5 mb-5" >
+    <button type="button" style="margin-bottom: 12px;" [routerLink]="['create/new']" class="btn btn-success ">Create</button>
+    
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Sifra</th>
+                <th >Naziv</th>
+                <th>Opis</th>
+                <th>Doziranje</th>
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lijek of lijekovi" >
+
+                <td>{{ lijek.sifra }}</td>
+                <td>{{ lijek.imeLijeka }}</td>
+                <td>{{ lijek.opisLijeka }}</td>
+                <td>{{ lijek.doziranje }}</td>
+                <td><button [routerLink]="['/lijek', lijek.id]" type="button" class="btn btn-info" id="{{lijek.id}}" >Detail View</button></td>
+                <td><button [routerLink]="['/lijek/edit', lijek.id]" type="button" class="btn btn-warning" id="{{lijek.id}}" >Edit</button></td>
+                <td><button  type="button" (click)="deleteLijek($event, lijek.id)" class="btn btn-danger" id="{{lijek.id}}" >Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -22,9 +22,27 @@ export class AppComponent {
     exact: true
   },
   {
+    link: "comment",
+    name: "Comments",
+    exact: false
+  },
+  {
+    link: "pokemon",
+    name: "Pokemons",
+    exact: true
+  },
+  {
+    link: "lijek",
+    name: "Lijekovi",
+    exact: true
+  }
+
+  /*
+  {
     link: "badroute",
     name: "Bad-Route",
     exact: true
   }
+    */
  ];
 }
